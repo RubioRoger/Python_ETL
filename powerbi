@@ -1,0 +1,12 @@
+
+TB_Data_venda = 
+ADDCOLUMNS (
+CALENDAR(min('Arquivo original'[DT_DA_VENDA]),MAX('Arquivo original'[DT_DA_VENDA])),
+"Ano", YEAR ( [Date] ),
+"Mês Num", MONTH ( [Date]),
+"Ano Mês Num", FORMAT ( [Date], "YYYY/MM" ),
+"Ano/Mês", FORMAT ( [Date], "mmm/YY" ),
+"Mês", FORMAT ( [Date], "mmm" ),
+"Dia Semana Num", WEEKDAY ( [Date] ),
+"Dia Semana", FORMAT ( [Date], "ddd" )
+)
